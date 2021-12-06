@@ -14,5 +14,5 @@
 
 export const environment = {
   production: true,
-  base_url: 'http://matterpolifactura.ddns.net:8080/api'
+  base_url: 'http://salud-materna.saludchiapas.gob.mx/api'
 };
