@@ -1,0 +1,192 @@
+<h1 mat-dialog-title><span *ngIf="paciente.id">Editar</span> <span *ngIf="!paciente.id">Nuevo</span> Paciente</h1>
+
+<div mat-dialog-content>
+
+    <div class="form-container" [formGroup]="pacienteForm">
+
+        <div class="form-loading-shade" *ngIf="isLoading"><mat-spinner *ngIf="isLoading"></mat-spinner></div>
+        <div class="form-loading-shade" *ngIf="!isLoading && !paciente">No se encontraron los datos del Paciente</div>
+
+        <br>
+
+        <div fxLayout.gt-sm="row" fxLayout="column" fxLayoutGap.gt-sm="10px">
+
+                <!-- <mat-label>Fecha de Ingreso: </mat-label>
+                <input matInput id="fecha_ingreso" type="date" formControlName="fecha_ingreso" placeholder="Fecha de Ingreso" max="{{this.fechaActual}}">
+                <mat-error *ngIf="pacienteForm.get('fecha_ingreso').invalid && (pacienteForm.get('fecha_ingreso').dirty || pacienteForm.get('fecha_ingreso').touched)">
+                    <span *ngIf="pacienteForm.get('fecha_ingreso').errors.required">La fecha de ingreso es obligatoria</span>
+                </mat-error> -->
+
+                <mat-form-field appearance="outline" fxFlex>
+                    <mat-label>Fecha de Ingreso: </mat-label>
+                    <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker1" formControlName="fecha_ingreso" placeholder="Fecha de Ingreso" readonly>
+                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                    <mat-datepicker #picker1></mat-datepicker>
+                    <mat-error *ngIf="pacienteForm.get('fecha_ingreso').invalid && (pacienteForm.get('fecha_ingreso').dirty || pacienteForm.get('fecha_ingreso').touched)">
+                        <span *ngIf="pacienteForm.get('fecha_ingreso').errors.required">La fecha de ingreso es obligatoria</span>
+                    </mat-error>
+                </mat-form-field>
+
+            <mat-form-field appearance="outline" fxFlex >
+                <mat-label>Hora de Ingreso: </mat-label>
+                <input matInput id="hora_ingreso" formControlName="hora_ingreso" placeholder="Hora de Ingreso">
+                <mat-error *ngIf="pacienteForm.get('hora_ingreso').invalid && (pacienteForm.get('hora_ingreso').dirty || pacienteForm.get('hora_ingreso').touched)">
+                    <span *ngIf="pacienteForm.get('hora_ingreso').errors.required">La fecha de ingreso es obligatoria</span>
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+            <mat-form-field appearance="outline" fxFlex>
+                <mat-label>Nombre: </mat-label>
+                <input matInput id="nombre" formControlName="nombre" placeholder="Nombre">
+                <mat-error *ngIf="pacienteForm.get('nombre').invalid && (pacienteForm.get('nombre').dirty || pacienteForm.get('nombre').touched)">
+                    <span *ngIf="pacienteForm.get('nombre').errors.required">El nombre es obligatorio</span>
+                </mat-error>
+            </mat-form-field>
+
+        <div fxLayout.gt-sm="row" fxLayout="column" fxLayoutGap.gt-sm="10px">
+            <mat-form-field appearance="outline" fxFlex >
+                <mat-label>Apellido Paterno: </mat-label>
+                <input matInput id="paterno" formControlName="paterno" placeholder="Paterno">
+                <mat-error *ngIf="pacienteForm.get('paterno').invalid && (pacienteForm.get('paterno').dirty || pacienteForm.get('paterno').touched)">
+                    <span *ngIf="pacienteForm.get('paterno').errors.required">La fecha de ingreso es obligatoria</span>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" fxFlex >
+                <mat-label>Apellido Materno: </mat-label>
+                <input matInput id="materno" formControlName="materno" placeholder="Materno" >
+                <mat-error *ngIf="pacienteForm.get('materno').invalid && (pacienteForm.get('materno').dirty || pacienteForm.get('materno').touched)">
+                    <span *ngIf="pacienteForm.get('materno').errors.required">La fecha de ingreso es obligatoria</span>
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+        <mat-form-field appearance="outline" fxFlex>
+            <mat-label>Teléfono de Contacto: </mat-label>
+            <input matInput (keypress)="numberOnly($event)" id="telefono_contacto" formControlName="telefono_contacto" placeholder="Teléfono de Contacto">
+            <mat-error *ngIf="pacienteForm.get('telefono_contacto').invalid && (pacienteForm.get('telefono_contacto').dirty || pacienteForm.get('telefono_contacto').touched)">
+                <span *ngIf="pacienteForm.get('telefono_contacto').errors.required">El Teléfono de Contacto es requerido</span>
+            </mat-error>
+        </mat-form-field>
+
+        <div *ngIf="pacienteForm.get('esExtranjero').value == 1" fxLayout.gt-sm="row" fxLayout="column" fxLayoutGap.gt-sm="10px">
+            <mat-form-field appearance="outline" fxFlex >
+                <mat-label>País de Origen: </mat-label>
+                <input matInput id="paisOrigen" formControlName="paisOrigen" placeholder="País de Origen">
+            </mat-form-field>
+        </div>
+
+
+
+        <div *ngIf="pacienteForm.get('curp').value != null" fxLayout.gt-sm="row" fxLayout="column" fxLayoutGap.gt-sm="10px">
+            <mat-form-field appearance="outline" fxFlex>
+                <mat-label>CURP: </mat-label>
+                <input matInput id="curp" formControlName="curp" placeholder="CURP">
+            </mat-form-field>
+        </div>
+
+        <div fxLayout.gt-sm="row" fxLayout="column" fxLayoutGap.gt-sm="10px">
+
+                <mat-form-field appearance="outline" fxFlex>
+
+                    <mat-label>Fecha de Nacimiento: </mat-label>
+                    <input matInput  (dateChange)="calculateAge()" [matDatepicker]="picker2" formControlName="fecha_nacimiento" placeholder="Fecha de Nacimiento" readonly>
+                    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                    <mat-datepicker #picker2></mat-datepicker>
+
+                    <mat-error *ngIf="pacienteForm.get('fecha_nacimiento').invalid && (pacienteForm.get('fecha_nacimiento').dirty || pacienteForm.get('fecha_nacimiento').touched)">
+                        <span *ngIf="pacienteForm.get('fecha_nacimiento').errors.required">La fecha de nacimiento es obligatoria</span>
+                    </mat-error>
+
+                <!-- <input matInput [matDatepicker]="picker2"  (change) = "calculateAge()" placeholder="Fecha de Nacimiento"  formControlName="fecha_nacimiento">
+                <mat-datepicker-toggle matPrefix [for]="picker2"></mat-datepicker-toggle>
+                <mat-datepicker #picker2 [disabled]="false"></mat-datepicker> -->
+
+
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" fxFlex >
+                <mat-label>Edad: </mat-label>
+                <input matInput formControlName="edad" placeholder="Edad" readonly>
+                <mat-error *ngIf="pacienteForm.get('edad').invalid && (pacienteForm.get('edad').dirty || pacienteForm.get('edad').touched)">
+                    <span *ngIf="pacienteForm.get('edad').errors.required">La fecha de ingreso es obligatoria</span>
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+        <div fxLayout.gt-sm="row" fxLayout="column" fxLayoutGap.gt-sm="10px">
+
+            <mat-form-field appearance="outline" fxFlex>
+                <mat-label>Municipio: </mat-label>
+                <mat-select formControlName="municipio_id" required>
+                    <mat-option *ngFor="let item of catalogo_municipios['catalogo_municipios']" [value]="item.id" (click)="getLocalidad(item.id)">
+                        {{item.nombre}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" fxFlex>
+                <mat-label>Localidad:</mat-label>
+                <mat-select formControlName="localidad_id" required>
+                    <mat-option *ngIf="localidadesIsLoading" class="is-loading"><mat-spinner diameter="25"></mat-spinner></mat-option>
+                    <ng-container *ngIf="!localidadesIsLoading">
+                        <mat-option *ngFor="let item of catalogo_localidades['localidad']" [value]="item.id">
+                            {{item.nombre}}
+                        </mat-option>
+                    </ng-container>
+                </mat-select>
+                <mat-error *ngIf="pacienteForm.get('localidad_id').invalid && (pacienteForm.get('localidad_id').dirty || pacienteForm.get('localidad_id').touched)">
+                    <span *ngIf="pacienteForm.get('localidad_id').errors.required">Seleccione la Localidad</span>
+                </mat-error>
+            </mat-form-field>
+
+        </div>
+
+
+        <div fxLayout.gt-sm="row" fxLayout="column" fxLayoutGap.gt-sm="10px">
+        
+            <mat-form-field appearance="outline" fxFlex>
+                <mat-label>Gestas: </mat-label>
+                <input matInput id="gestas"  formControlName="gestas" placeholder="Número de gestas" (change)="calcularGestas()">
+                <mat-error *ngIf="pacienteForm.get('gestas').invalid && (pacienteForm.get('gestas').dirty || pacienteForm.get('gestas').touched)">
+                    <span *ngIf="pacienteForm.get('gestas').errors.required">Las gestas son obligatorias</span>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" fxFlex>
+                <mat-label>Abortos: </mat-label>
+                <input matInput id="abortos" formControlName="abortos" placeholder="Número de Abortos" (change)="calcularGestas()">
+                <mat-error *ngIf="pacienteForm.get('abortos').invalid && (pacienteForm.get('abortos').dirty || pacienteForm.get('abortos').touched)">
+                    <span *ngIf="pacienteForm.get('abortos').errors.required">Los abortos son obligatorios</span>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" fxFlex>
+                <mat-label>Partos: </mat-label>
+                <input matInput id="partos" formControlName="partos" placeholder="Número de Partos" (change)="calcularGestas()">
+                <mat-error *ngIf="pacienteForm.get('partos').invalid && (pacienteForm.get('partos').dirty || pacienteForm.get('partos').touched)">
+                    <span *ngIf="pacienteForm.get('partos').errors.required">Los abortos son obligatorios</span>
+                </mat-error>
+            </mat-form-field>
+    
+
+            <mat-form-field appearance="outline" fxFlex>
+                <mat-label>Cesareas: </mat-label>
+                <input matInput id="cesareas" formControlName="cesareas" placeholder="Número de Cesareas" (change)="calcularGestas()">
+                <mat-error *ngIf="pacienteForm.get('cesareas').invalid && (pacienteForm.get('cesareas').dirty || pacienteForm.get('cesareas').touched)">
+                    <span *ngIf="pacienteForm.get('cesareas').errors.required">Los abortos son obligatorios</span>
+                </mat-error>
+            </mat-form-field>
+    
+        </div>
+
+
+    </div>
+</div>
+<mat-divider></mat-divider>
+<div mat-dialog-actions>
+    <span fxFlex></span>
+    <button mat-button (click)='onNoClick()'>Cancelar</button>
+    <button mat-raised-button (click)="savePaciente()" color="primary" [disabled]="pacienteForm.invalid || isLoading"><mat-icon>save</mat-icon> Guardar</button>
+</div>

@@ -1,0 +1,2 @@
+folio_paciente,clues,nombre,paterno,materno,edad,fecha_nacimiento,fecha_ingreso,hora_ingreso,curp,gestas,partos,cesareas,abortos,semanas_gestacionales,estaEmbarazada,fueReferida,tieneAlta,user_id,municipio_id,localidad_id,afiliacion_id,metodo_gestacional_id,clues_referencia
+CSSSA005773-1,CSSSA005773,Marlene,Flores,Penagos,28,31/12/1990,11/11/2019,14:35:27,MARFLP110313HCMLNS09,0,2,1,0,4,1,0,1,1,1,1,3,3,CSSSA007540

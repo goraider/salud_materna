@@ -1,0 +1,115 @@
+id,nombre,created_at,updated_at
+1,Hemorragía Obstétrica,05/11/2019 19:11,03/11/2019 19:11
+2,Acretismo placentario,06/11/2019 19:11,04/11/2019 19:11
+3,Placenta acreta,07/11/2019 19:11,05/11/2019 19:11
+4,Placenta increta,08/11/2019 19:11,06/11/2019 19:11
+5,Placenta percreta,09/11/2019 19:11,07/11/2019 19:11
+6,Placenta previa,10/11/2019 19:11,08/11/2019 19:11
+7,Implantacióm baja de la placenta,11/11/2019 19:11,09/11/2019 19:11
+8,Placenta previa marginal,12/11/2019 19:11,10/11/2019 19:11
+9,Placenta previa parcial,13/11/2019 19:11,11/11/2019 19:11
+10,Placenta previa oclusiva total,14/11/2019 19:11,12/11/2019 19:11
+11,Embarazo Ectópico,15/11/2019 19:11,13/11/2019 19:11
+12,Atonía uterina,16/11/2019 19:11,14/11/2019 19:11
+13,Inversión uterina,17/11/2019 19:11,15/11/2019 19:11
+14,Perforación uterina,18/11/2019 19:11,16/11/2019 19:11
+15,Retención de restos placentarios,19/11/2019 19:11,17/11/2019 19:11
+16,Desgarro del canal de parto,20/11/2019 19:11,18/11/2019 19:11
+17,Ruptura Uterina,21/11/2019 19:11,19/11/2019 19:11
+18,Aborto,22/11/2019 19:11,20/11/2019 19:11
+19,Hipertensión inducida por el embarazo,23/11/2019 19:11,21/11/2019 19:11
+20,Preeclampsia,24/11/2019 19:11,22/11/2019 19:11
+21,Eclampsia,25/11/2019 19:11,23/11/2019 19:11
+22,Sx de HELLP,26/11/2019 19:11,24/11/2019 19:11
+23,Enfermedad hipertensiva del embarazo,27/11/2019 19:11,25/11/2019 19:11
+24,Sepsis puerperal,28/11/2019 19:11,26/11/2019 19:11
+25,Ruptura Prematura de Membranas,29/11/2019 19:11,27/11/2019 19:11
+26,Pancreatitis,30/11/2019 19:11,28/11/2019 19:11
+27,Neumonia Adquirida en la comunidad,01/12/2019 19:11,29/11/2019 19:11
+28,Tuberculosis pulmonar,02/12/2019 19:11,30/11/2019 19:11
+29,Enterocolitis por Salmonella,03/12/2019 19:11,01/12/2019 19:11
+30,Diabetes gestacional,04/12/2019 19:11,02/12/2019 19:11
+31,Diabetes Mellitus II,05/12/2019 19:11,03/12/2019 19:11
+32,Hipertensión arterial sistémica,06/12/2019 19:11,04/12/2019 19:11
+33,VIH,07/12/2019 19:11,05/12/2019 19:11
+34,Enfermedad Trofoblástica Gestacional,08/12/2019 19:11,06/12/2019 19:11
+35,Coriocarcinoma,09/12/2019 19:11,07/12/2019 19:11
+36,Mola hidatiforme completa,10/12/2019 19:11,08/12/2019 19:11
+37,Mola invasora,11/12/2019 19:11,09/12/2019 19:11
+38,Mola hidatiforme parcial,12/12/2019 19:11,10/12/2019 19:11
+39,Tumor trofoblástico del sitio placentario,13/12/2019 19:11,11/12/2019 19:11
+40,Oligohidramnios,14/12/2019 19:11,12/12/2019 19:11
+41,Síndrome Antifosfolípido,15/12/2019 19:11,13/12/2019 19:11
+42,Hígado graso agudo del embarazo,16/12/2019 19:11,14/12/2019 19:11
+43,Trombosis Pulmonar,17/12/2019 19:11,15/12/2019 19:11
+44,Hipertiroidismo con crisis hipertensiva,18/12/2019 19:11,16/12/2019 19:11
+45,Embarazo y cardiopatía clase funcional,19/12/2019 19:11,17/12/2019 19:11
+46,Aborto Séptico,20/12/2019 19:11,18/12/2019 19:11
+47,Ruptura hepática,21/12/2019 19:11,19/12/2019 19:11
+48,Coagulación Intravascular Diseminada,22/12/2019 19:11,20/12/2019 19:11
+49,Insuficiencia Renal Aguda,23/12/2019 19:11,21/12/2019 19:11
+50,Desprendimiento prematuro de placenta normoin,24/12/2019 19:11,22/12/2019 19:11
+51,Embolia de líquido amniótico,25/12/2019 19:11,23/12/2019 19:11
+52,Choque Séptico,26/12/2019 19:11,24/12/2019 19:11
+53,Choque hipovolemico,27/12/2019 19:11,25/12/2019 19:11
+54,Choque hipovolemico grado I,28/12/2019 19:11,26/12/2019 19:11
+55,Choque hipovolemico grado II,29/12/2019 19:11,27/12/2019 19:11
+56,Choque hipovolemico grado III,30/12/2019 19:11,28/12/2019 19:11
+57,Choque hipovolemico grado IV,31/12/2019 19:11,29/12/2019 19:11
+58,Lupus eritematoso sistémico,01/01/2020 19:11,30/12/2019 19:11
+59,Dengue,02/01/2020 19:11,31/12/2019 19:11
+60,Dengue con datos de alarma,03/01/2020 19:11,01/01/2020 19:11
+61,Dengue sin datos de alarma,04/01/2020 19:11,02/01/2020 19:11
+62,Pródromos de Trabajo de parto,05/01/2020 19:11,03/01/2020 19:11
+63,Trabajo de parto,06/01/2020 19:11,04/01/2020 19:11
+64,Fase latente,07/01/2020 19:11,05/01/2020 19:11
+65,Fase activa,08/01/2020 19:11,06/01/2020 19:11
+66,Sin trabajo de parto,09/01/2020 19:11,07/01/2020 19:11
+67,Taquicardia fetal,10/01/2020 19:11,08/01/2020 19:11
+68,Bradicardia fetal,11/01/2020 19:11,09/01/2020 19:11
+69,Hipomotilidad fetal,12/01/2020 19:11,10/01/2020 19:11
+70,Infección de vías urinarias,13/01/2020 19:11,11/01/2020 19:11
+71,Amenaza de parto pretérmino,14/01/2020 19:11,12/01/2020 19:11
+72,Periodo intergénesico corto,15/01/2020 19:11,13/01/2020 19:11
+73,Cesárea iterativa,16/01/2020 19:11,14/01/2020 19:11
+74,Embarazo gemelar,17/01/2020 19:11,15/01/2020 19:11
+75,Sobrepeso,18/01/2020 19:11,16/01/2020 19:11
+76,Obesidad,19/01/2020 19:11,17/01/2020 19:11
+77,Obesidad grado I,20/01/2020 19:11,18/01/2020 19:11
+78,Obesidad grado II,21/01/2020 19:11,19/01/2020 19:11
+79,Obesidad grado III,22/01/2020 19:11,20/01/2020 19:11
+80,Puerperio fisiológico,23/01/2020 19:11,21/01/2020 19:11
+81,Puerperio quirúrgico,24/01/2020 19:11,22/01/2020 19:11
+82,Eritroblastosis fetal,25/01/2020 19:11,23/01/2020 19:11
+83,Anemia ferropénica del embarazo,26/01/2020 19:11,24/01/2020 19:11
+84,Colestasis intrahepática del embarazo,27/01/2020 19:11,25/01/2020 19:11
+85,Toxoplasmosis,28/01/2020 19:11,26/01/2020 19:11
+86,Rubéola,29/01/2020 19:11,27/01/2020 19:11
+87,Citomegalovirus,30/01/2020 19:11,28/01/2020 19:11
+88,Herpes simple,31/01/2020 19:11,29/01/2020 19:11
+89,Varicela Herpes-Zóster,01/02/2020 19:11,30/01/2020 19:11
+90,Sífilis,02/02/2020 19:11,31/01/2020 19:11
+91,Hepatitis B,03/02/2020 19:11,01/02/2020 19:11
+92,Obito fetal,04/02/2020 19:11,02/02/2020 19:11
+93,Polihidramnios,05/02/2020 19:11,03/02/2020 19:11
+94,Prolapso de cordón umbilical,06/02/2020 19:11,04/02/2020 19:11
+95,Restricción del crecimiento intrauterino,07/02/2020 19:11,05/02/2020 19:11
+96,Embarazo prolongado,08/02/2020 19:11,06/02/2020 19:11
+97,Aborto diferido,09/02/2020 19:11,07/02/2020 19:11
+98,Aborto espontáneo,10/02/2020 19:11,08/02/2020 19:11
+99,Desgarro de cuello,11/02/2020 19:11,09/02/2020 19:11
+100,Desgarro de vagina,12/02/2020 19:11,10/02/2020 19:11
+101,Desgarro de periné,13/02/2020 19:11,11/02/2020 19:11
+102,Hiperémesis gravídica,14/02/2020 19:11,12/02/2020 19:11
+103,Inducción del trabajo de parto,15/02/2020 19:11,13/02/2020 19:11
+104,Conducción del trabajo de parto,16/02/2020 19:11,14/02/2020 19:11
+105,Endometritis puerperal,17/02/2020 19:11,15/02/2020 19:11
+106,Mastitis puerperal,18/02/2020 19:11,16/02/2020 19:11
+107,Inmediato,19/02/2020 19:11,17/02/2020 19:11
+108,Mediato,20/02/2020 19:11,18/02/2020 19:11
+109,Absceso de pared,21/02/2020 19:11,19/02/2020 19:11
+110,Corioamnionitis,22/02/2020 19:11,20/02/2020 19:11
+111,Cistitis,23/02/2020 19:11,21/02/2020 19:11
+112,Pielonefritis,24/02/2020 19:11,22/02/2020 19:11
+113,Zika,25/02/2020 19:11,23/02/2020 19:11
+114,Chikungunya,26/02/2020 19:11,24/02/2020 19:11

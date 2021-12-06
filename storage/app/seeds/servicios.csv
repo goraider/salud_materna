@@ -1,0 +1,12 @@
+id,nombre,created_at,updated_at
+1,Admisión,07/11/2019 10:00,07/11/2019 10:00
+2,Urgencias,08/11/2019 10:00,08/11/2019 10:00
+3,Observación Adulto,09/11/2019 10:00,09/11/2019 10:00
+4,Terapia Intensiava,10/11/2019 10:00,10/11/2019 10:00
+5,Quirofano,11/11/2019 10:00,11/11/2019 10:00
+6,Recuperación,12/11/2019 10:00,12/11/2019 10:00
+7,Piso de Ginecologia,13/11/2019 10:00,13/11/2019 10:00
+8,Piso de Cirugia General,14/11/2019 10:00,14/11/2019 10:00
+9,Piso de Traumatología y Ortopedia,15/11/2019 10:00,15/11/2019 10:00
+10,Piso de Medicina Interina,16/11/2019 10:00,16/11/2019 10:00
+11,Tococirugía,17/11/2019 10:00,17/11/2019 10:00
